@@ -1,0 +1,218 @@
+/* Definições gerais do layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background: url('../img/ciberseguranca-header.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Adicionando o fundo semitransparente ao redor do título */
+  header h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro com 50% de opacidade */
+    z-index: -1; /* Coloca o fundo atrás do texto */
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #040325; /* Novo botão com cor mais sutil */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a0c57;
+  }
+  
+  /* Estilo para as seções */
+  section {
+    margin: 30px 20px;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards para os pilares */
+  .principios-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .principios-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .principios-card h3 {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .principios-card p {
+    font-size: 1em;
+    color: #7f8c8d;
+  }
+  
+  /* Seção de Ameaças e Informações */
+  .importancia-ciberseguranca p{
+    list-style-type: none;
+    padding-left: 0;
+    text-align: justify;
+  }
+  .importancia-ciberseguranca strong {
+    color: #e74c3c;
+  }
+  
+
+  .info-ciberseguranca ul {
+    list-style-type: none;
+    padding-left: 0;
+    
+    
+  }
+  
+  .info-ciberseguranca li {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .info-ciberseguranca strong {
+    color: #e74c3c;
+  }
+  
+  .info-ciberseguranca p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+  }
+  
+  /* Estilo do gráfico */
+  .grafico {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grafico canvas {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Quiz */
+  .simulador {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #emails {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  #emails .email {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #emails .email:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #emails .email.correct {
+    background-color: #151f17;
+    border: 2px solid #218838;
+    color: white;
+  }
+  
+  #emails .email.wrong {
+    background-color: #e74c3c;
+    border: 2px solid #c0392b;
+    color: white;
+  }
+  
+  #emails .email p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .principios-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1.5em;
+    }
+  
+    .grafico canvas {
+      width: 90%;
+    }
+  
+    #emails .email {
+      width: 90%;
+    }
+  }
+  
